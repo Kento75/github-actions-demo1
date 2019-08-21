@@ -29,5 +29,7 @@ brew install vagrant
 
 echo "Setup VM ..."
 
-vagrant ./VMs/provisioning/vagrant up
-vagrant ./VMs/sandbox/vagrant up
+cd ./VMs/provisioning/ && vagrant up
+cd ../../
+cd ./VMs/sandbox/ && vagrant up
+cd ../../

@@ -18,13 +18,12 @@ xcode-select --install
 source ~/.bash_profile
 brew -v
 brew update
-brew install caskroom/cask/brew-cask
 
 # Install VirtualBox
-brew install virtualbox
+brew cask install virtualbox
 
 # Install Vagrant
-brew install vagrant
+brew cask install vagrant
 
 
 echo "Setup VM ..."

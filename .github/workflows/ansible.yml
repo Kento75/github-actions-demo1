@@ -1,0 +1,23 @@
+name: Ansible and Vagrant Demo
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: macOS-10.14
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run bootstrap.sh
+      run: bash ./bootstrap.sh
+    - name: Run playbook
+      run : |
+        cd ./VMs/provisioning/
+        vagrant ssh -c "playbook -i inventory/hosts /vagrant/ansible/playbook.yml"

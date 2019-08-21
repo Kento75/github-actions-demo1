@@ -1,0 +1,6 @@
+- name: message...
+  debug: msg="set hostname {{ inventory_hostname }}"
+
+- name: Set hostname
+  hostname:
+    name: "{{ inventory_hostname }}"

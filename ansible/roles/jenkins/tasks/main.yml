@@ -1,0 +1,9 @@
+- name: "Install jenkins yum repository"
+  yum_repository:
+    name: jenkins
+    description: "jenkins YUM repo"
+    baseurl: "http://pkg.jenkins-ci.org/redhat-stable/"
+
+- name: "Install jenkins-ci.org.key"
+  rpm_key:
+    key: "http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key"

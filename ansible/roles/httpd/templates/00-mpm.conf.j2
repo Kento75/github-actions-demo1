@@ -1,0 +1,14 @@
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+
+<IfModule mpm_prefork_module>
+    StartServers {{ httpd.mpm.StartServers }}
+    MinSpareServers {{ httpd.mpm.MinSpareServers }}
+    MaxSpareServers {{ httpd.mpm.MaxSpareServers }}
+    ServerLimit {{ httpd.mpm.ServerLimit }}
+    MaxRequestWorkers {{ httpd.mpm.MaxRequestWorkers }}
+    MaxRequestsPerChild {{ httpd.mpm.MaxRequestsPerChild }}
+</IfModule>
+
+KeepAlive {{ httpd.mpm.KeepAlive }}
+MaxKeepAliveRequests {{ httpd.mpm.MaxKeepAliveRequests }}
+KeepAliveTimeout {{ httpd.mpm.KeepAliveTimeout }}

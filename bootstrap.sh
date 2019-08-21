@@ -24,7 +24,8 @@ brew cask install virtualbox
 
 # Install Vagrant
 brew cask install vagrant
-
+vagrant plugin uninstall vagrant-vbguest
+vagrant plugin install vagrant-vbguest
 
 echo "Setup VM ..."
 
